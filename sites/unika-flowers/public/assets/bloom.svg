@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <radialGradient id="petal"><stop stop-color="#f7edf3"/><stop offset=".55" stop-color="#debbd2"/><stop offset="1" stop-color="#b88dac" stop-opacity=".8"/></radialGradient>
+    <radialGradient id="heart"><stop stop-color="#f8f1d6"/><stop offset="1" stop-color="#ad819e"/></radialGradient>
+    <ellipse id="leaf" cx="80" cy="48" rx="23" ry="35" fill="url(#petal)"/>
+  </defs>
+  <g stroke="#f8f6ef" stroke-width="1.2">
+    <use href="#leaf"/><use href="#leaf" transform="rotate(45 80 80)"/>
+    <use href="#leaf" transform="rotate(90 80 80)"/><use href="#leaf" transform="rotate(135 80 80)"/>
+    <use href="#leaf" transform="rotate(180 80 80)"/><use href="#leaf" transform="rotate(225 80 80)"/>
+    <use href="#leaf" transform="rotate(270 80 80)"/><use href="#leaf" transform="rotate(315 80 80)"/>
+  </g>
+  <circle cx="80" cy="80" r="12" fill="url(#heart)"/>
+  <g fill="#f8f1d6"><circle cx="76" cy="77" r="2"/><circle cx="84" cy="78" r="2"/><circle cx="80" cy="84" r="2"/></g>
+</svg>

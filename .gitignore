@@ -1,0 +1,26 @@
+# Credentials and local runtime state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+**/credentials*
+**/secrets*
+node_modules/
+.npm-cache/
+.tgcloud/
+.openai/
+.sites-runtime/
+.wrangler/
+.next/
+.local/
+dist/
+outputs/
+backups/
+telegram-backup/
+*.sqlite*
+*.db
+*.tar.gz
+*.tsbuildinfo
+.DS_Store
+Thumbs.db

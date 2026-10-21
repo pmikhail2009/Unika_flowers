@@ -1,0 +1,65 @@
+/* A quiet, staggered arrival. Content stays readable if JavaScript fails. */
+@media (prefers-reduced-motion: no-preference) {
+  .announcement { animation: site-arrive 650ms ease-out both; }
+  .header { animation: site-arrive 850ms 70ms both; }
+  .hero-copy > * { animation: site-arrive 950ms cubic-bezier(.18,.7,.22,1) both; }
+  .hero-copy > :nth-child(1) { animation-delay: 130ms; }
+  .hero-copy > :nth-child(2) { animation-delay: 230ms; }
+  .hero-copy > :nth-child(3) { animation-delay: 350ms; }
+  .hero-copy > :nth-child(4) { animation-delay: 460ms; }
+  .hero-copy > :nth-child(5) { animation-delay: 560ms; }
+  .hero-photo { animation: photo-arrive 1400ms 160ms cubic-bezier(.18,.7,.22,1) both; }
+  .hero-photo > img { animation: photo-settle 1900ms 160ms cubic-bezier(.18,.7,.22,1) both; }
+  .round-label { animation: seal-arrive 1000ms 580ms both; }
+  .facts { animation: site-arrive 1000ms 520ms both; }
+  dialog[open] { animation: dialog-arrive 300ms cubic-bezier(.2,.7,.3,1); }
+  dialog[open]::backdrop { animation: backdrop-arrive 280ms ease-out; }
+
+  .bloom-waiting::before, .bloom-opening::before {
+    content: ''; position: absolute; z-index: 2; pointer-events: none;
+    width: clamp(74px, 42%, 130px); aspect-ratio: 1;
+    left: 50%; top: 35%;
+    background: url('/assets/bloom.svg') center / contain no-repeat;
+    transform: translate(-50%, -50%) scale(.52) rotate(-28deg);
+  }
+  .bloom-waiting > * { opacity: 0; }
+  .bloom-opening > .card-open {
+    transform-origin: 50% 35%;
+    animation: card-unfurl 1150ms var(--bloom-delay, 0ms) cubic-bezier(.2,.72,.25,1) both;
+  }
+  .bloom-opening > .card-heart, .bloom-opening > .compare-add {
+    animation: card-controls 650ms calc(var(--bloom-delay, 0ms) + 500ms) both;
+  }
+  .bloom-opening::before {
+    animation: flower-unfurl 1150ms var(--bloom-delay, 0ms) cubic-bezier(.2,.65,.25,1) both;
+  }
+  .card-heart, .filters button, .selection-button, .choice-row b {
+    transition: transform 250ms ease, background-color 250ms ease, color 250ms ease;
+  }
+  .card-heart:active, .selection-button:active { transform: scale(.94); }
+  .choice-row:hover b { transform: translate(3px, -3px); }
+}
+@keyframes site-arrive {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes photo-arrive {
+  from { opacity: 0; transform: translateY(25px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes photo-settle { from { transform: scale(1.075); } to { transform: scale(1); } }
+@keyframes seal-arrive { from { opacity: 0; scale: .7; } to { opacity: 1; scale: 1; } }
+@keyframes card-unfurl {
+  0% { opacity: 0; clip-path: ellipse(3% 3% at 50% 35%); transform: translateY(18px) scale(.78) rotate(-5deg); }
+  20% { opacity: .4; }
+  65% { opacity: 1; }
+  100% { opacity: 1; clip-path: ellipse(110% 110% at 50% 35%); transform: translateY(0) scale(1) rotate(0); }
+}
+@keyframes flower-unfurl {
+  0%, 12% { opacity: 1; transform: translate(-50%, -50%) scale(.52) rotate(-28deg); }
+  45% { opacity: .85; transform: translate(-50%, -50%) scale(1.1) rotate(0); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.65) rotate(18deg); }
+}
+@keyframes card-controls { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dialog-arrive { from { opacity: 0; transform: translateY(12px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes backdrop-arrive { from { opacity: 0; } to { opacity: 1; } }

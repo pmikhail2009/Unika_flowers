@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="arrow-up-right" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+  <symbol id="arrow-down-right" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19h14V5"/></symbol>
+  <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+  <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M20 12H4m7-7-7 7 7 7"/></symbol>
+  <symbol id="refresh" viewBox="0 0 24 24"><path d="M20 10a8 8 0 1 0-2 8M20 4v6h-6"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></symbol>
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M20.5 4.8c-2.3-2.3-6-1.8-8.5 1C9.5 3 5.8 2.5 3.5 4.8c-2.5 2.5-1.7 6.7.9 9.3L12 22l7.6-7.9c2.6-2.6 3.4-6.8.9-9.3Z"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+  <symbol id="close" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19 19 5"/></symbol>
+  <symbol id="plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+  <symbol id="flower" viewBox="0 0 24 24"><path d="M12 9C5-4 3 8 9 11-5 12 6 21 11 15c-1 14 12 5 4-1 14-2 3-13-1-5C17-5 4-1 12 9Z"/><circle cx="12" cy="12" r="2"/></symbol>
+</svg>
